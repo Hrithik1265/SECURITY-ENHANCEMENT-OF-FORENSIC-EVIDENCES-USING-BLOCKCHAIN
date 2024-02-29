@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+	
+            .context {
+            width: 100%;
+            position: absolute;
+            top:50vh;
+            }
+
+            .area{
+              /* background: #4e54c8;   */
+              float: left;
+              background: -webkit-linear-gradient(to left, #ffffff, #151518);  
+              width: 100%;
+              height:fit-content;
+              
+              
+            }
+
+            .circles{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 90%;
+              height: 90%;
+              overflow: hidden;
+            }
+
+            .circles li{
+              position: absolute;
+              display: block;
+              list-style: none;
+              width: 20px;
+              height: 20px;
+              background: rgba(255, 255, 255, 0.2);
+              animation: animate 25s linear infinite;
+              bottom: -150px;
+              
+            }
+
+            .circles li:nth-child(1){
+              left: 25%;
+              width: 80px;
+              height: 80px;
+              animation-delay: 0s;
+            }
+
+
+            .circles li:nth-child(2){
+              left: 10%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 2s;
+              animation-duration: 12s;
+            }
+
+            .circles li:nth-child(3){
+              left: 70%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 4s;
+            }
+
+            .circles li:nth-child(4){
+              left: 40%;
+              width: 60px;
+              height: 60px;
+              animation-delay: 0s;
+              animation-duration: 18s;
+            }
+
+            .circles li:nth-child(5){
+              left: 65%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 0s;
+            }
+
+            .circles li:nth-child(6){
+              left: 75%;
+              width: 110px;
+              height: 110px;
+              animation-delay: 3s;
+            }
+
+            .circles li:nth-child(7){
+              left: 35%;
+              width: 150px;
+              height: 150px;
+              animation-delay: 7s;
+            }
+
+            .circles li:nth-child(8){
+              left: 50%;
+              width: 25px;
+              height: 25px;
+              animation-delay: 15s;
+              animation-duration: 45s;
+            }
+
+            .circles li:nth-child(9){
+              left: 20%;
+              width: 15px;
+              height: 15px;
+              animation-delay: 2s;
+              animation-duration: 35s;
+            }
+
+            .circles li:nth-child(10){
+              left: 85%;
+              width: 150px;
+              height: 150px;
+              animation-delay: 0s;
+              animation-duration: 11s;
+            }
+
+
+
+            @keyframes animate {
+
+              0%{
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+              }
+
+              100%{
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+              }
+
+            }
+            body{
+                background:url("https://images.unsplash.com/photo-1639322537231-2f206e06af84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80") no-repeat center center fixed;
+                background-size: 100%;
+                height: fit-content;
+                min-height: 50vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-family: 'Work Sans', sans-serif;
+                font-weight:100;
+            }
+            
+            .container {
+              display: inline-grid;
+              grid-template-columns: auto auto;
+              margin: 1rem;
+              background-color: rgb(255, 255, 255);
+              margin-left: 0%;
+              font-family: sans-serif;
+              opacity:0.9;
+              }
+            .box {
+              width: 120px;
+              height: 110px;
+              border-radius: 5px;
+              background: #000;
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+              margin: 2rem;
+              }
+            .box:hover{
+              transform:  rotate(-5deg);
+            }
+            .linear::before {
+              content: "";
+              position: absolute;
+              width: 200%;
+              height: 200%;
+              background-image: conic-gradient(rgb(168,239,255,1) 20deg, transparent 120deg);
+              border-radius: 5px;
+              animation-name: rotate;
+              animation-duration: 10s;
+              animation-timing-function: linear;
+            }
+            .linear::after {
+              content: '';
+              position: absolute;
+              width: 90px;
+              height: 90px;
+              background: #000;
+              background-image: url('https://cdn.iconscout.com/icon/premium/png-256-thumb/pathologist-2256074-1887499.png');
+              background-size: cover;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.2rem;
+              }
+              
+            .ease::before {
+              content: '';
+              position: absolute;
+              background-image: conic-gradient(
+                rgb(168,239,255,1) 20deg, 
+                transparent 120deg
+                );
+              width: 200%;
+              height: 200%;
+              border-radius: 5px;
+              animation-name: rotate;
+              animation-duration: 10s;
+              animation-timing-function: ease;
+            }
+            .ease::after {
+              content: '';
+              position: absolute;
+              width: 90px;
+              height: 90px;
+              background: #000;
+              background-image: url('https://cdn-icons-png.flaticon.com/512/504/504276.png');
+              background-size: cover;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.2rem;
+            }
+            .ease-in::before {
+              content: "";
+              position: absolute;
+              width: 200%;
+              height: 200%;
+              background-image: conic-gradient(rgb(168,239,255,1) 20deg, transparent 120deg);
+              border-radius: 5px;
+              animation-name: rotate;
+              animation-duration: 10s;
+              animation-timing-function: ease-in;
+            }
+            .ease-in::after {
+              content: '' ;
+              position: absolute;
+              width: 90px;
+              height: 90px;
+              background: #000;
+              background-image: url('https://cdn-icons-png.flaticon.com/512/190/190624.png');
+              background-size: cover;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.2rem;
+            }
+            .ease-out::before {
+              content: "";
+              position: absolute;
+              width: 200%;
+              height: 200%;
+              background-image: conic-gradient(rgb(168,239,255,1) 20deg, transparent 120deg);
+              border-radius: 5px;
+              animation-name: rotate;
+              animation-duration: 10s;
+              animation-timing-function: ease-out;
+            }
+            .ease-out::after {
+              content: '';
+              position: absolute;
+              width: 90px;
+              height: 90px;
+              background: #000;
+              background-image: url('https://cdn.iconscout.com/icon/premium/png-256-thumb/lawyer-35-841710.png?f=webp&w=256');
+              background-size: cover;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.2rem;
+            }
+            .ease-in-out::before {
+              content: "";
+              position: absolute;
+              width: 200%;
+              height: 200%;
+              background-image: conic-gradient(rgb(168,239,255,1) 20deg, transparent 120deg);
+              border-radius: 5px;
+              animation-name: rotate;
+              animation-duration: 10s;
+              animation-timing-function: ease-in-out;
+            }
+            .ease-in-out::after {
+              content: '';
+              position: absolute;
+              width: 90px;
+              height: 90px;
+              background: #d4d3d3;
+              background-image: url('https://www.freeiconspng.com/thumbs/about-us-icon/about-us-icon-15.jpg');
+              background-size: cover;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.2rem;
+            }
+            @keyframes rotate {
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+            table{
+              border-collapse: collapse;  
+              border-spacing: 0;
+            }
+            aside{
+              margin-left: 10%;
+              top: 0px  ;
+              float: initial;
+              width: 70%;
+              height: 50%;
+            }
+            p {
+              font-size: 6vw;
+              text-transform: uppercase;
+              text-align: center;
+              line-height: 1;
+              
+            }
+
+            .fancy {
+              @supports (background-clip: text) or (-webkit-background-clip: text) {
+                background-image: 
+                  url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-size: 110% auto;
+                background-position: center;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+              }
+            }
+            
+        </style>
+    </head>
+    <body>
+            <!-- <h1> Security Enhancement Of Forensic Evidences Using Blockchain Technology</h1> -->
+      <aside><p>Security Enhancement Of <span class="fancy"> Forensic Evidences Using Blockchain Technology</span></p></aside>
+      <div class="area" >
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul></div>
+        
+      <aside><div class='container'>
+
+        <table >
+          <tr></tr>
+          <td><a href="{% url 'Admin' %}"><div class='box linear'></div></a><ul style="color: #000; list-style: none; font-family: cursive; text-transform: uppercase; font-size: larger;"><li>Pathology Lab</li></ul></td>
+          
+          <td><a href="{% url 'Hospital' %}"><div class='box ease'></div></a><ul style="color: #000; list-style: none; font-family: cursive; text-transform: uppercase; font-size: larger;"><li>Hospital</li></ul></td>
+          </tr>
+          <tr>
+          <td><a href="{% url 'Police' %}"><div class='box ease-in'></div></a><ul style="color: #000;list-style: none; font-family: cursive; text-transform: uppercase; font-size: larger;"><li>Police</li></ul></td>
+          
+          <td><a href="{% url 'User' %}"><div class='box ease-out'></div></a><ul style="color: #000; list-style: none; font-family: cursive; text-transform: uppercase; font-size: larger;"><li>Lawyer</li></ul></td>
+        </tr>
+          <td><a href="{% url 'About' %}"><div class='box ease-in-out'></div></a></td><td><ul style="color: #000; list-style: none; font-family: cursive; text-transform: uppercase; font-size: larger;"><li>About Us</li></ul></td>
+        </table>
+          
+      </div>
+    </aside>
+  </body>
+</html>
